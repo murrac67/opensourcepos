@@ -101,7 +101,7 @@ if(isset($success))
 
 
 <!-- Sale Items List -->
-
+<div id="overall_sale" class="panel panel-default">
 	<table class="sales_table_100" id="register">
 		<thead>
 			<tr>
@@ -299,8 +299,8 @@ if(isset($success))
 		</tbody>
 	</table>
 </div>
-
-<!-- Overall Sale -->
+</div> 
+<!-- Overall Sale
 
 <div id="overall_sale" class="panel panel-default">
 	<div class="panel-body">
