@@ -101,6 +101,282 @@ if(isset($success))
 
 
 <!-- Sale Items List -->
+	<!-- This is where you closed off Conor work still needed-->
+	<div class="container">
+		<?php
+			$category = 'Meals'
+			if($category = 'Meals')
+				{
+					$data['items'] = $this->Register_model->get_items($category);
+					<?php foreach ($item as $category_item): ?>
+					{
+				?>
+					<tr>
+						<td colspan='8'>
+							<div class='alert alert-dismissible alert-info'><?php echo $this->lang->line('sales_no_items_in_cart'); ?></div>
+						</td>
+					</tr>
+				<?php
+				}
+				else
+				{
+					foreach(array_reverse($cart, TRUE) as $line=>$item)
+					{
+				?>
+		
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Items</a></li>
+    <li><a data-toggle="tab" href="#menu1">Meals</a></li>
+    <li><a data-toggle="tab" href="#menu2">Drinks</a></li>
+    <li><a data-toggle="tab" href="#menu3">Deserts</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+    	<br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     <br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     <br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     
+    </div>
+    <div id="menu1" class="tab-pane fade">
+          	<br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     <br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     <br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     
+    </div>
+    <div id="menu2" class="tab-pane fade">
+          	<br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     <br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     <br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     
+    </div>
+    <div id="menu3" class="tab-pane fade">
+          	<br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     <br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     <br>
+    	<div class="row">
+      		<div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+            
+            <div class="col-xs-6 col-sm-3">
+                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
+            </div>
+     </div>
+     
+     
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 	<div id="overall_sale" class="panel panel-default">
 		<table class="sales_table_100" id="register">
 			<thead>
@@ -299,7 +575,6 @@ if(isset($success))
 			</tbody>
 		</table>
 	</div>
-</div> 
 
 
 <script type="text/javascript">
