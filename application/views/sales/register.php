@@ -126,7 +126,7 @@ if(isset($success))
 							for( $i = $j/6 ; $i = $j ; $i++) {
 							?>
       								<div class="col-xs-6 col-sm-3">
-                							<input type="button" class="btn btn-info btn-block btn-lg" value= $items($i)>
+                							<input type="button" class="btn btn-info btn-block btn-lg" value= <?php echo $items($i); ?>>
             							</div>
 							<?php
 							}
@@ -141,7 +141,7 @@ if(isset($success))
 					for ( $i=1 ; $i <=count($items) ; $i++) {
 						?>
 						<div class="col-xs-6 col-sm-3">
-                					<input type="button" class="btn btn-info btn-block btn-lg" value= $items($i)>
+                					<input type="button" class="btn btn-info btn-block btn-lg" value= <?php echo $items($i); ?>>
             					</div>
 					<?php	
 					}
