@@ -107,22 +107,27 @@ if(isset($success))
 			$category = 'Meals'
 			if($category = 'Meals')
 				{
+		?>
+			<div class="tab-content">
+    				<div id=$category class="tab-pane fade in active">
+		<?php
 					$data['items'] = $this->Register_model->get_items($category);
-					<?php foreach ($item as $category_item): ?>
-					{
-				?>
-					<tr>
-						<td colspan='8'>
-							<div class='alert alert-dismissible alert-info'><?php echo $this->lang->line('sales_no_items_in_cart'); ?></div>
-						</td>
-					</tr>
-				<?php
-				}
-				else
-				{
-					foreach(array_reverse($cart, TRUE) as $line=>$item)
-					{
-				?>
+					if (count($items) > 6) {
+						for( $j = 6  ; $j <= count) ; $j+= 6) {
+							?>
+							<div class="row">
+							<?php
+							for( $i = $j/6 ; $i = $j ; $i++) {
+							?>
+      								<div class="col-xs-6 col-sm-3">
+                							<input type="button" class="btn btn-info btn-block btn-lg" value= $items($i)>
+            							</div>
+							<?php
+							}
+						}
+					}
+			}
+			?>
 		
 
   <ul class="nav nav-tabs">
