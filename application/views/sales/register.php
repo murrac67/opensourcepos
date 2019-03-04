@@ -103,6 +103,12 @@ if(isset($success))
 <!-- Sale Items List -->
 	<!-- This is where you closed off Conor work still needed-->
 	<div class="container">
+	<ul class="nav nav-tabs">
+    	<li class="active"><a data-toggle="tab" href="#home">Items</a></li>
+   	<li><a data-toggle="tab" href="#menu1">Meals</a></li>
+    	<li><a data-toggle="tab" href="#menu2">Drinks</a></li>
+    	<li><a data-toggle="tab" href="#menu3">Deserts</a></li>
+  	</ul>
 		<?php
 			$category = 'Meals'
 			if($category = 'Meals')
@@ -113,7 +119,7 @@ if(isset($success))
 		<?php
 					$data['items'] = $this->Register_model->get_items($category);
 					if (count($items) > 6) {
-						for( $j = 6  ; $j <= count) ; $j+= 6) {
+						for( $j = 6  ; $j <= count($items) ; $j+= 6) {
 							?>
 							<div class="row">
 							<?php
@@ -124,463 +130,229 @@ if(isset($success))
             							</div>
 							<?php
 							}
+							?>
+							</div>
+							<?php
 						}
 					}
+// 				?>
+					<div class="row">
+					<?php
+					for ( $i=1 ; $i <=count($items) ; $i++) {
+						?>
+						<div class="col-xs-6 col-sm-3">
+                					<input type="button" class="btn btn-info btn-block btn-lg" value= $items($i)>
+            					</div>
+					<?php	
+					}
+					?>
+					<br>
+					</div>
+					<?php
 			}
-			?>
-		
+		?>
+		</div>
 
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Items</a></li>
-    <li><a data-toggle="tab" href="#menu1">Meals</a></li>
-    <li><a data-toggle="tab" href="#menu2">Drinks</a></li>
-    <li><a data-toggle="tab" href="#menu3">Deserts</a></li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-    	<br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     <br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     <br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     
-    </div>
-    <div id="menu1" class="tab-pane fade">
-          	<br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     <br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     <br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     
-    </div>
-    <div id="menu2" class="tab-pane fade">
-          	<br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     <br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     <br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     
-    </div>
-    <div id="menu3" class="tab-pane fade">
-          	<br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     <br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     <br>
-    	<div class="row">
-      		<div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-            
-            <div class="col-xs-6 col-sm-3">
-                	<input type="button" class="btn btn-info btn-block btn-lg" value="Test">
-            </div>
-     </div>
-     
-     
-    </div>
-    </div>
-  </div>
-</div>
-</div>
 	<div id="overall_sale" class="panel panel-default">
-		<table class="sales_table_100" id="register">
-			<thead>
-				<tr>
-					<th style="width: 5%;"><?php echo $this->lang->line('common_delete'); ?></th>
-					<th style="width: 15%;"><?php echo $this->lang->line('sales_item_number'); ?></th>
-					<th style="width: 30%;"><?php echo $this->lang->line('sales_item_name'); ?></th>
-					<th style="width: 10%;"><?php echo $this->lang->line('sales_price'); ?></th>
-					<th style="width: 10%;"><?php echo $this->lang->line('sales_quantity'); ?></th>
-					<th style="width: 15%;"><?php echo $this->lang->line('sales_discount'); ?></th>
-					<th style="width: 10%;"><?php echo $this->lang->line('sales_total'); ?></th>
-					<th style="width: 5%;"><?php echo $this->lang->line('sales_update'); ?></th>
-				</tr>
-			</thead>
-
-			<tbody id="cart_contents">
-				<?php
-				if(count($cart) == 0)
-				{
-				?>
+		<div class="panel-body">
+			<table class="sales_table_100" id="register">
+				<thead>
 					<tr>
-						<td colspan='8'>
-							<div class='alert alert-dismissible alert-info'><?php echo $this->lang->line('sales_no_items_in_cart'); ?></div>
-						</td>
+						<th style="width: 5%;"><?php echo $this->lang->line('common_delete'); ?></th>
+						<th style="width: 15%;"><?php echo $this->lang->line('sales_item_number'); ?></th>
+						<th style="width: 30%;"><?php echo $this->lang->line('sales_item_name'); ?></th>
+						<th style="width: 10%;"><?php echo $this->lang->line('sales_price'); ?></th>
+						<th style="width: 10%;"><?php echo $this->lang->line('sales_quantity'); ?></th>
+						<th style="width: 15%;"><?php echo $this->lang->line('sales_discount'); ?></th>
+						<th style="width: 10%;"><?php echo $this->lang->line('sales_total'); ?></th>
+						<th style="width: 5%;"><?php echo $this->lang->line('sales_update'); ?></th>
 					</tr>
-				<?php
-				}
-				else
-				{
-					foreach(array_reverse($cart, TRUE) as $line=>$item)
+				</thead>
+
+				<tbody id="cart_contents">
+					<?php
+					if(count($cart) == 0)
 					{
-				?>
-
-						<?php echo form_open($controller_name."/edit_item/$line", array('class'=>'form-horizontal', 'id'=>'cart_'.$line)); ?>
-							<tr>
-								<td>
-									<?php echo anchor($controller_name . "/delete_item/$line", '<span class="glyphicon glyphicon-trash"></span>'); ?>
-									<?php echo form_hidden('location', $item['item_location']); ?>
-									<?php echo form_input(array('type'=>'hidden', 'name'=>'item_id', 'value'=>$item['item_id'])); ?>
-								</td>
-								<?php
-								if($item['item_type'] == ITEM_TEMP)
-								{
-								?>
-									<td><?php echo form_input(array('name'=>'item_number', 'id'=>'item_number','class'=>'form-control input-sm', 'value'=>$item['item_number'], 'tabindex'=>++$tabindex));?></td>
-									<td style="align: center;">
-										<?php echo form_input(array('name'=>'name','id'=>'name', 'class'=>'form-control input-sm', 'value'=>$item['name'], 'tabindex'=>++$tabindex));?>
-									</td>
-								<?php
-								}
-								else
-								{
-								?>
-									<td><?php echo $item['item_number']; ?></td>
-									<td style="align: center;">
-										<?php echo $item['name'] . ' ' . $item['attribute_values']; ?>
-										<br/>
-										<?php if ($item['stock_type'] == '0'): echo '[' . to_quantity_decimals($item['in_stock']) . ' in ' . $item['stock_name'] . ']'; endif; ?>
-									</td>
-								<?php
-								}
-								?>
-								<?php
-								if($items_module_allowed)
-								{
-								?>
-									<td><?php echo form_input(array('name'=>'price', 'class'=>'form-control input-sm', 'value'=>to_currency_no_money($item['price']), 'tabindex'=>++$tabindex, 'onClick'=>'this.select();'));?></td>
-								<?php
-								}
-								else
-								{
-								?>
-									<td>
-										<?php echo to_currency($item['price']); ?>
-										<?php echo form_hidden('price', to_currency_no_money($item['price'])); ?>
-									</td>
-								<?php
-								}
-								?>
-
-								<td>
-									<?php
-									if($item['is_serialized']==1)
-									{
-										echo to_quantity_decimals($item['quantity']);
-										echo form_hidden('quantity', $item['quantity']);
-									}
-									else
-									{
-										echo form_input(array('name'=>'quantity', 'class'=>'form-control input-sm', 'value'=>to_quantity_decimals($item['quantity']), 'tabindex'=>++$tabindex, 'onClick'=>'this.select();'));
-									}
-									?>
-								</td>
-
-								<td>
-									<div class="input-group">
-										<?php echo form_input(array('name'=>'discount', 'class'=>'form-control input-sm', 'value'=>to_decimals($item['discount'], 0), 'tabindex'=>++$tabindex, 'onClick'=>'this.select();')); ?>
-										<span class="input-group-btn">
-											<?php echo form_checkbox(array('id'=>'discount_toggle', 'name'=>'discount_toggle', 'value'=>1, 'data-toggle'=>"toggle",'data-size'=>'small', 'data-onstyle'=>'success', 'data-on'=>'<b>'.$this->config->item('currency_symbol').'</b>', 'data-off'=>'<b>%</b>', 'data-line'=>$line, 'checked'=>$item['discount_type'])); ?>
-										</span>
-									</div> 
-								</td>
-
-								<td>
-									<?php
-									if($item['item_type'] == ITEM_AMOUNT_ENTRY)
-									{
-										echo form_input(array('name'=>'discounted_total', 'class'=>'form-control input-sm', 'value'=>to_currency_no_money($item['discounted_total']), 'tabindex'=>++$tabindex, 'onClick'=>'this.select();'));
-									}
-									else
-									{
-										echo to_currency($item['discounted_total']);
-									}
-									?>
-								</td>
-							
-								<td><a href="javascript:document.getElementById('<?php echo 'cart_'.$line ?>').submit();" title=<?php echo $this->lang->line('sales_update')?> ><span class="glyphicon glyphicon-refresh"></span></a></td>
-								</tr>
+					?>
+						<tr>
+							<td colspan='8'>
+								<div class='alert alert-dismissible alert-info'><?php echo $this->lang->line('sales_no_items_in_cart'); ?></div>
+							</td>
+						</tr>
+					<?php
+					}
+					else
+					{
+						foreach(array_reverse($cart, TRUE) as $line=>$item)
+						{
+					?>
+	
+							<?php echo form_open($controller_name."/edit_item/$line", array('class'=>'form-horizontal', 'id'=>'cart_'.$line)); ?>
 								<tr>
-								<?php
-								if($item['item_type'] == ITEM_TEMP)
-								{
-								?>
-									<td><?php echo form_input(array('type'=>'hidden', 'name'=>'item_id', 'value'=>$item['item_id'])); ?></td>
-									<td style="align: center;" colspan="6">
-										<?php echo form_input(array('name'=>'item_description', 'id'=>'item_description', 'class'=>'form-control input-sm', 'value'=>$item['description'], 'tabindex'=>++$tabindex));?>
+									<td>
+										<?php echo anchor($controller_name . "/delete_item/$line", '<span class="glyphicon glyphicon-trash"></span>'); ?>
+										<?php echo form_hidden('location', $item['item_location']); ?>
+										<?php echo form_input(array('type'=>'hidden', 'name'=>'item_id', 'value'=>$item['item_id'])); ?>
 									</td>
-									<td> </td>
-								<?php
-								}
-								else
-								{
-								?>
-									<td> </td>
 									<?php
-									if($item['allow_alt_description']==1)
+									if($item['item_type'] == ITEM_TEMP)
 									{
-										?>
-										<td style="color: #2F4F4F;"><?php echo $this->lang->line('sales_description_abbrv');?></td>
-										<?php
+									?>
+										<td><?php echo form_input(array('name'=>'item_number', 'id'=>'item_number','class'=>'form-control input-sm', 'value'=>$item['item_number'], 'tabindex'=>++$tabindex));?></td>
+										<td style="align: center;">
+											<?php echo form_input(array('name'=>'name','id'=>'name', 'class'=>'form-control input-sm', 'value'=>$item['name'], 'tabindex'=>++$tabindex));?>
+										</td>
+									<?php
 									}
+									else
+									{
+									?>
+										<td><?php echo $item['item_number']; ?></td>
+										<td style="align: center;">
+											<?php echo $item['name'] . ' ' . $item['attribute_values']; ?>
+											<br/>
+											<?php if ($item['stock_type'] == '0'): echo '[' . to_quantity_decimals($item['in_stock']) . ' in ' . $item['stock_name'] . ']'; endif; ?>
+										</td>
+									<?php
+									}
+									?>
+									<?php
+									if($items_module_allowed)
+									{
+									?>
+										<td><?php echo form_input(array('name'=>'price', 'class'=>'form-control input-sm', 'value'=>to_currency_no_money($item['price']), 'tabindex'=>++$tabindex, 'onClick'=>'this.select();'));?></td>
+									<?php
+									}
+									else
+									{
+									?>
+										<td>
+											<?php echo to_currency($item['price']); ?>
+											<?php echo form_hidden('price', to_currency_no_money($item['price'])); ?>
+										</td>
+									<?php
+									}
+									?>
+	
+									<td>
+										<?php
+										if($item['is_serialized']==1)
+										{
+											echo to_quantity_decimals($item['quantity']);
+											echo form_hidden('quantity', $item['quantity']);
+										}
+										else
+										{
+											echo form_input(array('name'=>'quantity', 'class'=>'form-control input-sm', 'value'=>to_quantity_decimals($item['quantity']), 'tabindex'=>++$tabindex, 'onClick'=>'this.select();'));
+										}
 										?>
-
-									<td colspan='2' style="text-align: left;">
+									</td>
+	
+									<td>
+										<div class="input-group">
+											<?php echo form_input(array('name'=>'discount', 'class'=>'form-control input-sm', 'value'=>to_decimals($item['discount'], 0), 'tabindex'=>++$tabindex, 'onClick'=>'this.select();')); ?>
+											<span class="input-group-btn">
+												<?php echo form_checkbox(array('id'=>'discount_toggle', 'name'=>'discount_toggle', 'value'=>1, 'data-toggle'=>"toggle",'data-size'=>'small', 'data-onstyle'=>'success', 'data-on'=>'<b>'.$this->config->item('currency_symbol').'</b>', 'data-off'=>'<b>%</b>', 'data-line'=>$line, 'checked'=>$item['discount_type'])); ?>
+											</span>
+										</div> 
+									</td>
+	
+									<td>
+										<?php
+										if($item['item_type'] == ITEM_AMOUNT_ENTRY)
+										{
+											echo form_input(array('name'=>'discounted_total', 'class'=>'form-control input-sm', 'value'=>to_currency_no_money($item['discounted_total']), 'tabindex'=>++$tabindex, 'onClick'=>'this.select();'));
+										}
+										else
+										{
+											echo to_currency($item['discounted_total']);
+										}
+										?>
+									</td>
+								
+									<td><a href="javascript:document.getElementById('<?php echo 'cart_'.$line ?>').submit();" title=<?php echo $this->lang->line('sales_update')?> ><span class="glyphicon glyphicon-refresh"></span></a></td>
+									</tr>
+									<tr>
+									<?php
+									if($item['item_type'] == ITEM_TEMP)
+									{
+									?>
+										<td><?php echo form_input(array('type'=>'hidden', 'name'=>'item_id', 'value'=>$item['item_id'])); ?></td>
+										<td style="align: center;" colspan="6">
+											<?php echo form_input(array('name'=>'item_description', 'id'=>'item_description', 'class'=>'form-control input-sm', 'value'=>$item['description'], 'tabindex'=>++$tabindex));?>
+										</td>
+										<td> </td>
+									<?php
+									}
+									else
+									{
+									?>
+										<td> </td>
 										<?php
 										if($item['allow_alt_description']==1)
 										{
-											echo form_input(array('name'=>'description', 'class'=>'form-control input-sm', 'value'=>$item['description'], 'onClick'=>'this.select();'));
+											?>
+											<td style="color: #2F4F4F;"><?php echo $this->lang->line('sales_description_abbrv');?></td>
+											<?php
 										}
-										else
-										{
-											if($item['description']!='')
+											?>
+	
+										<td colspan='2' style="text-align: left;">
+											<?php
+											if($item['allow_alt_description']==1)
 											{
-												echo $item['description'];
-												echo form_hidden('description', $item['description']);
+												echo form_input(array('name'=>'description', 'class'=>'form-control input-sm', 'value'=>$item['description'], 'onClick'=>'this.select();'));
 											}
 											else
 											{
-												echo $this->lang->line('sales_no_description');
-												echo form_hidden('description','');
+												if($item['description']!='')
+												{
+												echo $item['description'];
+													echo form_hidden('description', $item['description']);
+												}
+												else
+												{
+													echo $this->lang->line('sales_no_description');
+													echo form_hidden('description','');
+												}
 											}
-										}
-										?>
-									</td>
-									<td>&nbsp;</td>
-									<td style="color: #2F4F4F;">
-										<?php
-										if($item['is_serialized']==1)
-										{
-											echo $this->lang->line('sales_serial');
-										}
-										?>
-									</td>
-									<td colspan='4' style="text-align: left;">
-										<?php
-										if($item['is_serialized']==1)
-										{
-											echo form_input(array('name'=>'serialnumber', 'class'=>'form-control input-sm', 'value'=>$item['serialnumber'], 'onClick'=>'this.select();'));
-										}
-										else
-										{
-											echo form_hidden('serialnumber', '');
-										}
-										?>
-									</td>
-								<?php
-								}
-								?>
-	
-							</tr>
-						<?php echo form_close(); ?>
-				<?php
+											?>
+										</td>
+										<td>&nbsp;</td>
+										<td style="color: #2F4F4F;">
+											<?php
+											if($item['is_serialized']==1)
+											{
+												echo $this->lang->line('sales_serial');
+											}
+											?>
+										</td>
+										<td colspan='4' style="text-align: left;">
+											<?php
+											if($item['is_serialized']==1)
+											{
+												echo form_input(array('name'=>'serialnumber', 'class'=>'form-control input-sm', 'value'=>$item['serialnumber'], 'onClick'=>'this.select();'));
+											}
+											else
+											{
+												echo form_hidden('serialnumber', '');
+											}
+											?>
+										</td>
+									<?php
+									}
+									?>
+		
+								</tr>
+							<?php echo form_close(); ?>
+					<?php
+						}
 					}
-				}
-				?>
-			</tbody>
-		</table>
+					?>
+				</tbody>
+			</table>
 	</div>
-
+</div>
 
 <script type="text/javascript">
 $(document).ready(function()
