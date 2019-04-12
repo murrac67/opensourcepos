@@ -345,6 +345,20 @@ class Item extends CI_Model
 
 		return '';
 	}
+	
+	/*
+	Get a list of items with with their catagories
+	*/
+	public function get_categories()
+	{
+		$this->db->select('category, item_id, name, item_number');		
+		$this->db->from('items');
+		$this->db->where('deleted', 0);
+		$this->db->distinct();
+		$this->db->order_by('category', 'asc');
+		$this->db->order_by('name', 'asc');
+		return $this->db->get();
+	}
 
 	/*
 	Get an item id given an item number
