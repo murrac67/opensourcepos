@@ -22,6 +22,21 @@ class Sales extends Secure_Controller
 		$this->session->set_userdata('allow_temp_items', 1);
 		$this->_reload();
 	}
+	
+	public function get_item_categories()
+    	{
+        	$this->load->model('item');        
+		$item = $this->Item->get_categories();     
+       		$this->db->order_by('name', 'asc');
+	   	$categories = array();               
+        	foreach($item->result() as $result)
+		{            
+			$categories[$result->category][] = $result->name; 	
+			$categories[$result->category][] = $result->item_number ?: $result->item_id;
+	    	}	
+		
+        	echo json_encode($categories);
+    	}
 
 	public function manage()
 	{
