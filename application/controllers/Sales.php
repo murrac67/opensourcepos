@@ -24,18 +24,17 @@ class Sales extends Secure_Controller
 	}
 	
 	public function get_item_categories()
-    	{
-        	$this->load->model('item');        
-		$item = $this->Item->get_categories();     
-       		$this->db->order_by('name', 'asc');
-	   	$categories = array();               
-        	foreach($item->result() as $result)
-		{            
-			$categories[$result->category][] = $result->name; 	
-			$categories[$result->category][] = $result->item_number ?: $result->item_id;
-	    	}	
-		
-        	echo json_encode($categories);
+	{
+        $this->load->model('item');        
+        $items = $this->Item->get_all();
+       // print_r($items->result());
+        $categories = array();        
+        
+        foreach ( $items->result() as $result) {
+            $categories[$result->category][] = $result->name;
+        }
+        
+        echo json_encode($categories);
     	}
 
 	public function manage()
